@@ -8,21 +8,9 @@
       "@components": [
         "src/app/components"
       ],
-      "@models": [
-        "src/app/models"
-      ],
       "@assets/*": [
         "src/assets/*"
-      ],
-      "@services": [
-        "src/app/services"
-      ],
-      "@helpers": [
-        "src/app/helpers"
-      ],
-      "@hoc": [
-        "src/app/hoc"
-      ],
+      ]
     },
     "module": "commonjs",
     "target": "es5",

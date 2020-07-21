@@ -2,37 +2,47 @@
 import * as React from 'react';
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 
-import {UsersComponent, HomeComponent} from '@components';
-import {PrivateRoute} from '@hoc';
-import {DIContext, getDependencies} from '@helpers';
+import {Home} from '@components';
 
 import './app.styles.css';
 
 const App = (): JSX.Element => {
   return (
-    <DIContext.Provider value={getDependencies()}>
-      <div className="center-wrap">
-        <Router>
+    <div className="center-wrap">
+      <Router>
+        <div>
+          <nav>
+            <img className="logo" src={require('@assets/images/icon.png')} alt="" />
+            <ul id="menu">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/users">Users</Link>
+              </li>
+            </ul>
+          </nav>
+          <Switch>
+            <Route exact path="/" component={Home} />
+          </Switch>
+          <br/>
+          <br/>
+          <br/>
           <div>
-            <nav>
-              <img className="logo" src={require('@assets/images/logo.png')} alt="" />
-              <ul id="menu">
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/users">Users</Link>
-                </li>
-              </ul>
-            </nav>
-            <Switch>
-              <Route exact path="/" component={HomeComponent} />
-              <PrivateRoute exact path="/users" component={UsersComponent} />
-            </Switch>
+            <Link to="/" className="button round dark button-big">Home</Link>
+            <br/> <br/> <br/> <br/> <br/> <br/>
+            <Link to="/" className="button round dark button-big">useState</Link>
+            <Link to="/" className="button round dark button-big">useRef</Link>
+            <Link to="/" className="button round dark button-big">useEffect</Link>
+            <Link to="/" className="button round dark button-big">useMemo</Link>
+            <Link to="/" className="button round dark button-big">useCallback</Link>
+            <Link to="/" className="button round dark button-big">useReducer</Link>
+            <Link to="/" className="button round dark button-big">useContext</Link>
+
           </div>
-        </Router>
-      </div>
-    </DIContext.Provider>
+        </div>
+      </Router>
+    </div>
   );
 }
 

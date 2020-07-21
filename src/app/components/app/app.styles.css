@@ -6,3 +6,45 @@ ul#menu li {
   display:inline;
   padding: 10px;
 }
+
+.button {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 10px;
+  transition: all 0.2s ease-in-out;
+  margin: 15px;
+}
+
+.button:hover {
+  background-color: #444;
+}
+
+.button:active {
+  background-color: #333;
+}
+
+.button-big {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 20px;
+  transition: all 0.2s ease-in-out;
+  margin: 15px;
+}
+
+.button-big:hover {
+  background-color: #444;
+}
+
+.button-big:active {
+  background-color: #333;
+}
+
+.round {
+  border-radius: 4px;
+}
+
+.dark {
+  background-color: #34495e;
+}
