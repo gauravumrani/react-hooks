@@ -2,7 +2,7 @@
 import * as React from 'react';
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 
-import {Home, UseStateComponent} from '@components';
+import {Home, UseStateComponent, UseRefComponent} from '@components';
 
 import './app.styles.css';
 
@@ -21,6 +21,7 @@ const App = (): JSX.Element => {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/use-state" component={UseStateComponent} />
+              <Route exact path="/use-ref" component={UseRefComponent} />
             </Switch>
           </div>
           <br />

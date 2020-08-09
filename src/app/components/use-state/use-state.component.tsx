@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 
-/* class UseState extends React.Component <{}, {name: string}> {
+class UseState extends React.Component <{}, {name: string}> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -27,10 +27,10 @@ import * as React from 'react';
       </div>
     )
   }
-} */
+}
 
 
-function UseState(): JSX.Element {
+/* function UseState(): JSX.Element {
   const [name, setName] = React.useState('Gaurav');
   function updateName(): any {
     setName(name === 'Gaurav' ? 'Gaurav Umrani' : 'Gaurav');
@@ -44,7 +44,7 @@ function UseState(): JSX.Element {
       <button onClick={updateName}>Add/Remove Surname</button>
     </div>
   );
-}
+} */
 
 export default UseState;
 
