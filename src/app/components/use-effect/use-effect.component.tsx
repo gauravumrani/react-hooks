@@ -7,7 +7,7 @@ interface Post {
 }
 const LOADING = 'Loading';
 
-class UseEffect extends React.Component <{}, Post> {
+/* class UseEffect extends React.Component <{}, Post> {
   constructor(props: any) {
     super(props);
     this.state = {};
@@ -23,6 +23,10 @@ class UseEffect extends React.Component <{}, Post> {
 
   componentDidMount(): void {
     this.getData(1);
+  }
+
+  componentWillUnmount(): void {
+    console.log('Exit from component');
   }
 
   render(): any {
@@ -41,10 +45,10 @@ class UseEffect extends React.Component <{}, Post> {
       </div>
     )
   }
-}
+} */
 
 
-/* function UseEffect(): JSX.Element {
+function UseEffect(): JSX.Element {
   const [state, setState] = React.useState<Post>({});
   const [id, setId] = React.useState(1);
 
@@ -59,11 +63,14 @@ class UseEffect extends React.Component <{}, Post> {
   // called whenver something happens
   React.useEffect((): any => {
     getData(id);
+    return (): void => {
+      console.log('Exit from component');
+    }
   }, [id]);
 
   return (
     <div>
-      This is an Example of use effect alternative in class based <br/>
+      This is an Example of use effect <br/>
       Selected Id is {id}
       <br />
       <br />
@@ -75,6 +82,6 @@ class UseEffect extends React.Component <{}, Post> {
       <button onClick={(): void => setId(2)}>Get Data for ID 2</button>
     </div>
   );
-} */
+}
 
 export default UseEffect;
