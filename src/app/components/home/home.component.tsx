@@ -15,7 +15,7 @@ const Home = (): JSX.Element => {
       <div>
         <Link to="/use-state" className="button round dark button-big">useState</Link>
         <Link to="/use-ref" className="button round dark button-big">useRef</Link>
-        <Link to="/" className="button round dark button-big">useEffect</Link>
+        <Link to="/use-effect" className="button round dark button-big">useEffect</Link>
         <Link to="/" className="button round dark button-big">useMemo</Link>
         <Link to="/" className="button round dark button-big">useCallback</Link>
         <Link to="/" className="button round dark button-big">useReducer</Link>
