@@ -3,6 +3,7 @@ import * as React from 'react';
 
 // optimize computed value
 function heavyFunctionSquare(num: number): number {
+  // eslint-disable-next-line no-empty
   for (let index = 0; index < 10e8; index++) {}
   return num * 2;
 }
@@ -16,10 +17,11 @@ function UseMemo(): JSX.Element {
     });
   }
 
-  const sq = React.useMemo((): any => {
+  /* const sq = React.useMemo((): any => {
     return heavyFunctionSquare(10);
-  }, [count]);
-  console.log(sq)
+  }, [count]); // returns value */
+  const sq = heavyFunctionSquare(10);
+  console.log('re-render')
   return (
     <div>
       This is an Example useMemo in function based component
