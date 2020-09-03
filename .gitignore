@@ -40,3 +40,6 @@ Thumbs.db
 
 # local config file
 config/local.json
+
+# Local Netlify folder
+.netlify
