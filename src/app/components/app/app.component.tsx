@@ -10,7 +10,8 @@ import {
   UseContextComponent,
   UseMemoComponent,
   UseCallbackComponent,
-  UseReducerComponent
+  UseReducerComponent,
+  UseCustomHookComponent
 } from '@components';
 
 import './app.styles.css';
@@ -39,6 +40,7 @@ const App = (): JSX.Element => {
                 <Route exact path="/use-memo" component={UseMemoComponent} />
                 <Route exact path="/use-callback" component={UseCallbackComponent} />
                 <Route exact path="/use-reducer" component={UseReducerComponent} />
+                <Route exact path="/use-custom" component={UseCustomHookComponent} />
               </Switch>
             </div>
             <br />

@@ -20,6 +20,7 @@ const Home = (): JSX.Element => {
         <Link to="/use-memo" className="button round dark button-big">useMemo</Link>
         <Link to="/use-callback" className="button round dark button-big">useCallback</Link>
         <Link to="/use-reducer" className="button round dark button-big">useReducer</Link>
+        <Link to="/use-custom" className="button round dark button-big">Custom Hook</Link>
       </div>
     </>
   )
